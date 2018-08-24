@@ -1,0 +1,39 @@
+    1  ls
+    2  sudo ls
+    3  root
+    4  sudo
+    5  quit
+    6  ls
+    7  cd ..
+    8  ls
+    9  cd ..
+   10  ls
+   11  cd home
+   12  cd EDU
+   13  cd t.holmatov/
+   14  ls
+   15  rm file.txt
+   16  mv ex3.sh week1/ex3.sh
+   17  mkdir week1
+   18  mv ex3.sh week1/ex3.sh
+   19  ls
+   20  cd week1/
+   21  ls ../../../usr/bin/ | grep "gcc" | > ex1.txt
+   22  ls ../../../../usr/bin/ | grep "gcc" | > ex1.txt
+   23  cat ex1.txt
+   24  less ex1.txt
+   25  ls ../../../../usr/bin | grep "gcc" | > ex1.txt
+   26  cat ex1.txt 
+   27  ls ../../../../usr/bin | grep "gcc" | cat ex1.txt
+   28  cat ex1.txt 
+   29  ls ../../../../usr/bin | grep "gcc"
+   30  ls ../../../../usr/bin | grep "gcc" > ex1.txt
+   31  cat ex1.txt
+   32  ls ../../../../usr/bin | grep "gcc" | sort -r > ex1.txt
+   33  cat ex1.txt
+   34  rm ex1.txt
+   35  ls
+   36  ls ../../../../usr/bin | grep "gcc" | sort -r > ex1.txt
+   37  ls
+   38  cat ex1.txt
+   39  history > ex2.txt
