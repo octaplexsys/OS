@@ -14,5 +14,6 @@ int main() {
     printf("Before swap: %d %d\n", n, m);
     swap(&n, &m);
     printf("After swap: %d %d\n", n, m);
+    printf("After swap: %d %d\n", n, m);
     return 0;
 }
