@@ -21,7 +21,7 @@ int main(void) {
                 read(fd[0], &childpid2, sizeof(childpid2));
 		printf("\nChild#1 has read from pipe. pid=%d\n", childpid2);
 		sleep(2);
-		kill(childpid2, SIGKILL);
+		kill(childpid2, SIGSTOP);
 		printf("\nChild#1 has sent a signal to child#2\n");
                 exit(0);
         }
@@ -43,8 +43,9 @@ int main(void) {
                 	close(fd[0]);
                 	write(fd[1], &childpid2, sizeof(childpid2));
 			printf("\nParent has written to pipe. pid=%d\n", childpid2);
-			waitpid(childpid2, &status, 0);
-			printf("\nChild#2 has finished with status %d\n", status);
+			waitpid(childpid2, &status, WUNTRACED);
+			printf("\nSIGSTOP number: %d\n", SIGSTOP);
+			printf("\nChild#2 has finished with status %d\n", WSTOPSIG(status));
 		        exit(0);
 		}
         }
