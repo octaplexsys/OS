@@ -39,7 +39,6 @@ int get_frame_to_evict(struct frame *table, int m) {
 }
 
 struct result solve(int *array, int n, int m) {
-  printf("%d\n", n);
   int max = 1 << 30, i, j;
   struct result res = {0, 0};
   struct frame table[m];
