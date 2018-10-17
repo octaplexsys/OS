@@ -1,0 +1,2 @@
+To maximize the hit/miss ratio the input file should contain the sequences of the form '1 2 3 4 5 6 7 8 9 10'. Then, there will be only 10 misses and all other references will lead to hits.
+To minimize the hit/miss ratio the input file should contain the sequences of the distinct references. The more distinct references in the sequences, the smaller hit/miss ratio is.
