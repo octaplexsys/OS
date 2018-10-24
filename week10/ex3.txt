@@ -1,0 +1,45 @@
+echo "" > _ex3.txt
+
+chmod ugo-x _ex3.txt
+
+chmod uo+rwx _ex3.txt
+
+stat -c "%a" _ex3.txt
+<output>
+767
+</output>
+
+new_num=`stat -c "%a" _ex3.txt | awk '{print substr($0,1,1)substr($0,1,1)substr($0,3,1)}'`
+chmod $(($new_num)) _ex3.txt
+<comment>
+now group permissions equal to user permissions
+</comment>
+
+stat -c "%a" _ex3.txt
+<output>
+777
+</output>
+
+chmod 660 _ex3.txt
+<comment>
+660 means:
+-read/write for user
+-read/write for group
+-no permissions for others
+</comment>
+
+chmod 775 _ex3.txt
+<comment>
+775 means:
+-read/write/execute for user
+-read/write/execute for group
+-read/execute for others
+</comment>
+
+chmod 777 _ex3.txt
+<comment>
+777 means:
+-read/write/execute for user
+-read/write/execute for group
+-read/write/execute for others
+</comment>

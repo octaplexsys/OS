@@ -1,0 +1,2 @@
+inode: 401391
+files: link1 file1 

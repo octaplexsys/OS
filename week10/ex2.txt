@@ -1,0 +1,20 @@
+mkdir week01
+mkdir week10
+cd week01
+echo "" > file.txt
+cd ..
+cd week10
+link ../week01/file.txt _ex2.txt
+cd ..
+ls -i week01/file.txt
+<output> 
+409860 week01/file.txt
+</output>
+find -inum 409860
+<output> 
+./week10/_ex2.txt
+./week01/file.txt
+</output>
+find -inum 409858 -exec rm {} \;
+<output>
+</output>
