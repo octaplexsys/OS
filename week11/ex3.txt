@@ -1,0 +1,2 @@
+For the standard streams like stdout, stdin the default buffering type is the line buffering. That is why in the first program the printf("Hello") does not print it immediately. The string is stored in the buffer. When the process forks, both processes print 'Hello' because of a newline symbol printed.
+However, in the second program the "Hello" is first printed and, afterwards, it forks and two processes each print a newline symbol.
