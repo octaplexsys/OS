@@ -1,0 +1,26 @@
+fileA - /proc/cpuinfo
+Execution with buf_size=1024, no SYNC:
+real	0m0.003s
+user	0m0.001s
+sys	0m0.003s
+Execution with buf_size=1, no SYNC:
+real	0m0.058s
+user	0m0.004s
+sys	0m0.053s
+Execution with buf_size=1024, SYNC:
+real	0m0.035s
+user	0m0.001s
+sys	0m0.004s
+Execution with buf_size=512, SYNC:
+real	0m0.064s
+user	0m0.000s
+sys	0m0.005s
+Execution with buf_size=256, SYNC:
+real	0m0.129s
+user	0m0.001s
+sys	0m0.006s
+Execution with buf_size=1, SYNC:
+program does not finish
+
+Conclusion:
+In both situations (with SYNC or without) the size of buffer effect the execution time. While in async buffering the change of buffer_size does not influence too much, in sync buffering division of buffer_size by two increases the execution time twice.
