@@ -1,0 +1,9 @@
+1. Recovery from Deadlock (all kinds are not attractive to use):
+a) through Preemption: might be difficult and even impossible because this type of recovering highly depends on the nature of resource, choosing the process to suspend depends on which ones have resources to easily take back.
+b) through Rollback: checkpointing periodically is time and space consuming
+c) through Killing Processes: cannot kill any process because restarting one, it may redo some operations already done and effect the system, data in wrong way.
+2. Avoidance is better than recovery but still almost not realistic because of some necessary assumptions:
+- when a process asks for resources, it asks for them all at once;
+- certain information (future requests) should be available in advance
+3. Prevention is much better than previous attempts because it tries to break some condition of deadlocking.
+This approach is at least possible and holds the goal of preventing deadlocks.
